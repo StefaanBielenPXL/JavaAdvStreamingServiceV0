@@ -26,4 +26,6 @@ public class ProfileAllowedToWatchTest {
         // Assert
         Assertions.assertFalse(result);
     }
+
+
 }

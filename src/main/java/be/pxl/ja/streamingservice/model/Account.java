@@ -9,7 +9,9 @@ public class Account {
     private StreamingPlan streamingPlan;
     private List<Profile> profiles;
 
-    public Account() {
+    public Account(String email, String password) {
+        this.email = email;
+        this.password = password;
         Profile profile = new Profile();
         profile.setName("profile1");
     }

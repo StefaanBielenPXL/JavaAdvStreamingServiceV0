@@ -11,7 +11,7 @@ public class Profile {
         if (dateOfBirth == null) {
             return false;
         }
-        return getAge() > content.getMaturityRating().getAge();
+        return getAge() >= content.getMaturityRating().getAge();
     }
 
     public int getAge() {
