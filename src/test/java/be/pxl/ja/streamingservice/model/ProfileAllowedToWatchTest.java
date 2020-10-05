@@ -12,7 +12,7 @@ public class ProfileAllowedToWatchTest {
 
     @BeforeEach
     public void init() {
-        profile = new Profile();
+        profile = new Profile("profile1");
         content = new Movie("Titanic", Rating.OLDER_KIDS);
 
     }
@@ -27,5 +27,22 @@ public class ProfileAllowedToWatchTest {
         Assertions.assertFalse(result);
     }
 
+    @Test
+    public void returnsTrueIfMatureForContent() {
+        // Arrange
+        profile.setDateOfBirth(LocalDate.of(2000, 1, 1));
+        // Act
+        boolean result = profile.allowedToWatch(content);
+        // Assert
+        Assertions.assertTrue(result);
+    }
+
+    @Test
+    public void returnsFalseIfDateOfBirthIsNotSet() {
+        // Act
+        boolean result = profile.allowedToWatch(content);
+        // Assert
+        Assertions.assertFalse(result);
+    }
 
 }

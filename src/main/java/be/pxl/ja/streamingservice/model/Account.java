@@ -12,8 +12,8 @@ public class Account {
     public Account(String email, String password) {
         this.email = email;
         this.password = password;
-        Profile profile = new Profile();
-        profile.setName("profile1");
+        Profile profile = new Profile("profile1");
+
     }
 
     public Profile getFirstProfile() {

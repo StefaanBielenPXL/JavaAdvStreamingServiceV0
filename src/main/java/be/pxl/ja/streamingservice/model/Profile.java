@@ -7,6 +7,9 @@ public class Profile {
     private String name;
     private LocalDate dateOfBirth;
 
+    public Profile(String name) {
+        this.name = name;
+    }
     public boolean allowedToWatch(Content content) {
         if (dateOfBirth == null) {
             return false;
