@@ -15,7 +15,7 @@ public class MovieSetDurationTest {
     }
 
     @Test
-    public void negativeDurationBecomesPositif() {
+    public void negativeDurationBecomesPositive() {
         // Act
         movie.setDuration(-200);
         // Assert

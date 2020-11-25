@@ -1,5 +1,6 @@
 package be.pxl.ja.streamingservice.model;
 
+
 public final class TVShow extends Content {
 
     private int numberOfSeasons;

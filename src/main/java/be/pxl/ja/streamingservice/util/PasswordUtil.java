@@ -18,10 +18,10 @@ public class PasswordUtil {
 		} else {
 			score += 2;
 		}
-		hasLowerCase(password);
-		hasUpperCase(password);
-		hasNumber(password);
 		hasSpecialCharacters(password);
+		hasUpperCase(password);
+		hasLowerCase(password);
+		hasNumber(password);
 		return score;
 	}
 

@@ -1,19 +1,21 @@
 package be.pxl.ja.streamingservice.model;
 
+import java.math.BigDecimal;
+
 public enum StreamingPlan {
-    BASIC(1, 7.99),
-    STANDAARD(2, 11.99),
-    PREMIUM(4, 15.99);
+    BASIC(1, new BigDecimal(7.99)),
+    STANDAARD(2, new BigDecimal(11.99)),
+    PREMIUM(4, new BigDecimal(15.99));
 
     private int numberOfProfiles;
-    private double price;
+    private BigDecimal price;
 
-    StreamingPlan(int numberOfProfiles, double price) {
+    StreamingPlan(int numberOfProfiles, BigDecimal price) {
         this.numberOfProfiles = numberOfProfiles;
         this.price = price;
     }
 
-    public double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
